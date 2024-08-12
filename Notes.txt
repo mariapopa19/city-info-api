@@ -1,0 +1,1 @@
+In Package Manager Console after doing an migration I need to run "update-database" to run migrations
