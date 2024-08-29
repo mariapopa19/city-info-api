@@ -19,8 +19,8 @@ namespace CityInfo.API.DbContexts
                 .HasData(
                 new City("New York City")
                 {
-                   Id = 1,
-                   Description = "The one with that big park."
+                    Id = 1,
+                    Description = "The one with that big park."
                 },
                 new City("Antwerp")
                 {
