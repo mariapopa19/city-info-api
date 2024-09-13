@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
 
 namespace CityInfo.API.Controllers
 {
-    [Route("api/files")]
+    [Route("api/v{version:apiVersion}/files")]
     [Authorize]
     [ApiController]
     public class FilesController : ControllerBase
@@ -15,6 +16,7 @@ namespace CityInfo.API.Controllers
             _fileExtensionContentTypeProvider = fileExtensionContentTypeProvider ?? throw new System.ArgumentNullException(nameof(fileExtensionContentTypeProvider));
         }
         [HttpGet("{fileId}")]
+        [ApiVersion(0.1, Deprecated = true)]
         public ActionResult GetFile(string fileId)
         {
             var pathToFile = "Coffee Recipe Sharing App.txt";
