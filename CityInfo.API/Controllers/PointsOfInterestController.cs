@@ -12,7 +12,7 @@ using SQLitePCL;
 namespace CityInfo.API.Controllers
 {
     [Route("api/v{version:apiVersion}/cities/{cityId}/pointsofinterest")]
-    [Authorize(Policy = "MustBeFromAntwerp")]
+    //[Authorize(Policy = "MustBeFromAntwerp")]
     [ApiController]
     [ApiVersion(2)]
     public class PointsOfInterestController : ControllerBase
